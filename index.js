@@ -12,7 +12,7 @@ const isQueryMatch = (restObj, query) => {
   return (
     restObj.name.toLowerCase().includes(query.toLowerCase()) ||
     restObj.description.toLowerCase().includes(query.toLowerCase()) ||
-    restObj.tags.some(function(tag) {
+    restObj.tags.some(tag => {
       return tag.toLowerCase().includes(query.toLowerCase());
     })
   );
